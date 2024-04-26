@@ -1,0 +1,38 @@
+/* ========================================================================
+    SCSS files entry point
+    SMACSS Schema -  https://smacss.com/book/categorizing/
+   ======================================================================== */
+
+/* SCSS Variables */
+@import "variables";
+
+/* External fonts and styles */
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+
+/* SMACSS Schema -  https://smacss.com/book/categorizing/ */
+
+/* BASE */
+@import "base";
+
+/* LAYOUTS */
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
+
+/* STATES */
+@import "states/common-states";
+
+/* THEMES */
+@import "themes/default_theme";
+
+/* MODULES */
+@import "modules/photo";
+@import "modules/card";
+
+/* PAGES */
+@import "pages/home";
+@import "pages/test";
+
+
+

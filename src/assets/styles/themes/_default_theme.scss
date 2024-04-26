@@ -1,0 +1,60 @@
+/* ========================================================================
+   DEFAULT THEME
+   ======================================================================== */
+
+/* --- BASE  */
+body{
+  background-color: yellow;
+}
+
+/* --- LAYOUTS - HEADER  */
+.header-layout{
+  background-color: gray;
+}
+
+/* --- LAYOUTS - MAIN  */
+.main-layout{
+  background-color: dimgray;
+}
+
+/* --- LAYOUTS - FOOTER  */
+.footer-layout{
+  background-color: lightslategray;
+}
+
+/* --- MODULES - PHOTO ---------------------------------------------------- */
+.photo-module {
+  &__caption {
+    color: white;
+    text-align: right;
+    background-color: rgb(0 0 0 / 60%);
+  }
+}
+
+.photo-transition img{;
+  filter: grayscale(50%);
+  transition: transform 1s ease, filter 1s ease;
+  transform-origin: center;
+
+  &:hover {
+    filter: grayscale(0%);
+    transform: scale(1.5);
+  }
+}
+
+/* --- MODULES - CARD -----------------_---------------------------------- */
+
+.card-module{
+  background-color: white;
+  &__photo-container {
+
+  }
+
+  &__title{
+    margin: 24px;
+  }
+
+  &__text{
+    margin: 12px;
+  }
+}

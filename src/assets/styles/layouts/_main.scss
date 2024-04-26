@@ -1,0 +1,21 @@
+/* ========================================================================
+   MAIN LAYOUT
+   ======================================================================== */
+
+/* --- MOBILE / OLD DEVICES ----------------------------------------------- */
+.main-layout{
+  grid-area: main-layout;
+  padding: 0 10px;
+  background-color: red;
+}
+
+
+/* --- DESKTOP ------------------------------------------------------------ */
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  .main-layout{
+    background-color: blue;
+  }
+}
+
+
+

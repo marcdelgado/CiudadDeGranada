@@ -1,0 +1,43 @@
+/* ========================================================================
+   VARIABLES
+   ======================================================================== */
+@use "sass:color";
+
+/* Global fonts */
+$font-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-serif: "Georgia", "Times New Roman", serif;
+
+
+/* Size parameters */
+$media-width-transition: 1260px; /* from 1280x1024 screens, minus 20px for scroll */
+$desktop-fixed-width: 1200px;
+$desktop-quarter-width: 300px;
+$desktop-half-width: 600px;
+
+/* --- Palette colors ----------------------------------------------------- */
+
+/* Body */
+$content-color-title: black;
+$content-color-text: black;
+$content-color-link: black;
+$content-color-link-hover: black;
+$content-bg-outer: gray;
+$content-bg-inner: white;
+
+/* Header */
+$header-color-title: black;
+$header-color-text: black;
+$header-color-link: black;
+$header-color-link-hover: black;
+$header-bg-outer: gray;
+$header-bg-inner: white;
+
+/* Footer */
+$footer-color-title: black;
+$footer-color-text: black;
+$footer-color-link: black;
+$footer-color-link-hover: black;
+$footer-bg-outer: gray;
+$footer-bg-inner: white;

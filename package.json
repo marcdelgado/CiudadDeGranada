@@ -1,0 +1,61 @@
+{
+  "name": "ciudad-de-granada",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website with tourist information about the city of Granada, Spain.",
+  "scripts": {
+    "parcel:serve": "parcel src/routes/index.html -p 8123 --target web --open",
+    "parcel:build": "parcel build src/routes/index.html --target web --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+    "dev": "npm-run-all clean generate-pages optimize-images stylelint parcel:serve",
+    "build": "npm-run-all clean generate-pages optimize-images parcel:build",
+    "test": "echo 'No tests. No errors.'",
+    "stylelint": "stylelint src/**/*.scss --fix",
+    "generate-pages": "node tools/generatePages",
+    "optimize-images": "node tools/optimizeImages"
+  },
+  "web": "dist/index.html",
+  "targets": {
+    "web": {
+      "context": "browser",
+      "publicUrl": "./",
+      "engines": {
+        "browsers": "last 2 versions, > 0.5%, not dead"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcdelgado/CiudadDeGranada.git"
+  },
+  "author": {
+    "name": "Marc Delgado",
+    "email": "marcdelgado@gmail.com"
+  },
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/marcdelgado/CiudadDeGranada/issues"
+  },
+  "homepage": "https://github.com/marcdelgado/CiudadDeGranada#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "autoprefixer": "^10.4.15",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.11.0",
+    "postcss-preset-env": "^9.1.1",
+    "posthtml-expressions": "^1.11.3",
+    "posthtml-include": "^1.7.4",
+    "rimraf": "^5.0.1",
+    "sharp": "0.33.3",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.2.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "posthtml-extend": "^0.6.5",
+    "swiper": "^11.0.7"
+  }
+}

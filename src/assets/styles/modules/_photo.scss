@@ -1,0 +1,35 @@
+/* ========================================================================
+   PHOTO MODULE
+   ======================================================================== */
+
+.photo-module{
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: darkred;
+
+  &__picture{
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &__img{
+      display: block;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+

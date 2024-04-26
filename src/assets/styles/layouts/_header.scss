@@ -1,0 +1,48 @@
+/* ========================================================================
+   HEADER LAYOUT
+   ======================================================================== */
+
+
+/* --- MOBILE / OLD DEVICES ----------------------------------------------- */
+.header-layout{
+  display: grid;
+  grid-area: header-layout;
+  grid-template:
+    "logo-box main-menu-box aux-menu-box" 1fr / 1fr 50px 50px;
+  place-items: center;
+
+  &__logo-box{
+    grid-area: logo-box;
+  }
+
+  &__main-menu-box{
+    grid-area: main-menu-box;
+  }
+
+  &__slogan-box{
+    display: none;
+    grid-area: slogan-box;
+  }
+
+  &__aux-menu-box{
+    grid-area: aux-menu-box;
+  }
+}
+
+
+/* --- DESKTOP ------------------------------------------------------------ */
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  .header-layout{
+    grid-template:
+    ". logo-box main-menu-box main-menu-box main-menu-box ." 4fr
+    ". slogan-box slogan-box slogan-box aux-menu-box ." 1fr
+    / 1fr $desktop-quarter-width $desktop-quarter-width $desktop-quarter-width $desktop-quarter-width 1fr;
+    place-items: stretch;
+
+    &__slogan-box{
+      display: block;
+    }
+  }
+}
+
+

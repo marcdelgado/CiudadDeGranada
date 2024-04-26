@@ -1,0 +1,14 @@
+<article class="card-module">
+    <div class="card-module__photo-container">
+        <each loop="photo, index in card.PHOTO">
+            <include src="modules/photo.html"></include>
+        </each>
+    </div>
+
+    <h1 class="card-module__title">
+        {{{card.title}}}
+    </h1>
+    <p class="card-module__text">
+        {{{card.description}}}
+    </p>
+</article>

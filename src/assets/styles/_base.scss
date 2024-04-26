@@ -1,0 +1,47 @@
+/* ========================================================================
+   BASE ATTRIBUTES
+   ======================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+.fas, .fa-regular, .fa-solid, .fab, .fa-brands{
+  padding-right: 10px;
+}
+
+
+/* --- MOBILE / OLD DEVICES ----------------------------------------------- */
+body {
+  display: grid;
+  grid-template:
+    "header-layout" 150px "main-layout" 1fr "footer-layout" 200px / 1fr;
+  place-items: stretch stretch;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* --- DESKTOP ------------------------------------------------------------ */
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  body {
+    grid-template:
+    "header-layout header-layout header-layout" 150px ". main-layout ." 1fr "footer-layout footer-layout footer-layout" 200px / 1fr $desktop-fixed-width 1fr;
+    place-items: stretch stretch;
+    min-height: 100vh;
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{lang_html_code}}">
+<include src="layouts/head.html"></include>
+<body>
+<include src="layouts/header.html"></include>
+
+<main class="main-layout">
+<!-- PAGE CONTENT STARTS HERE -->
+
+    <h1>
+        {{{PAGES.HOME.locations.title}}}
+    </h1>
+    <p>
+        {{{PAGES.HOME.locations.description}}}
+    </p>
+    <each loop="card, index in PAGES.HOME.locations.CARD">
+        <include src="modules/card.html"></include>
+    </each>
+
+<!-- PAGE CONTENT ENDS HERE -->
+</main>
+<include src="layouts/footer.html"></include>
+</body>
+</html>
