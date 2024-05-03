@@ -1,17 +1,27 @@
 <header class="header-layout">
-    <div class="header-layout__logo-box">
-        <h1>Esto es el logo-box</h1>
+    <div class="header-layout__pre-header">
+        <div class="header-layout__pre-header__description-box">
+            <p class="header-layout__pre-header__description-box__description">{{LAYOUTS.HEADER.subtitle_txt}}</p>
+        </div>
+        <div class="header-layout__pre-header__world-icon">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="header-layout__pre-header__lang-box">
+            <include src="modules/lang-menu.html"></include>
+        </div>
     </div>
-    <div class="header-layout__main-menu-box">
-        <p>Esto es el main-menu-box</p>
-    </div>
-    <div class="header-layout__slogan-box">
-        <h2>Esto es el slogan-box</h2>
-    </div>
-    <div class="header-layout__aux-menu-box">
-        <p>Esto es el aux-menu-box</p>
+    <!-- Lower menu bar - Logo and main menu -->
+    <div class="header-layout__main-header">
+        <div class="header-layout__main-header__hamburger-icon" onclick="myFunction(this)">
+            <div class="bar1"></div> <div class="bar2"></div> <div class="bar3"></div>
+        </div>
+        <div class="header-layout__main-header__title-box">
+            <h1 class="header-layout__main-header__title-box__title">{{LAYOUTS.HEADER.title_txt}}</h1>
+        </div>
+        <div class="header-layout__main-header__menu-box">
+            <each loop="navitem, key in LAYOUTS.HEADER.NAV_main">
+                <include src="modules/main-menu.html"></include>
+            </each>
+        </div>
     </div>
 </header>
-
-
-

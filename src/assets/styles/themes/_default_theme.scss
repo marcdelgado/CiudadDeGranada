@@ -4,12 +4,81 @@
 
 /* --- BASE  */
 body{
-  background-color: yellow;
+  background-color: #f1f1f1;
+  background-image: linear-gradient(45deg, #e5e5e5 50%, #f1f1f1 50%);
+  background-size: 4px 4px;
+  opacity: 1;
 }
 
 /* --- LAYOUTS - HEADER  */
 .header-layout{
-  background-color: gray;
+  background-color: black;
+
+
+
+  a{
+    position: relative;
+    display: block;
+    padding: 0;
+    color: #bbb;
+    transition: color 300ms ease;
+  }
+
+  a:hover{
+    color: #ffa7a7;
+  }
+
+  a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.15em;
+    content: '';
+    background-color: #d20000;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.3em, 0);
+  }
+
+
+  &__pre-header{
+    border-bottom-style: solid;
+    border-bottom-color: #bbb;
+
+    &__description-box{
+      &__description{
+        font-family: 'Palatino LT Black', "Times New Roman", serif;
+        font-size: 1.2rem;
+        color: #bbb;
+      }
+    }
+
+    &__world-icon{
+      color: white;
+      font-size: 40px;
+    }
+  }
+
+  &__main-header{
+    &__title-box{
+      &__title{
+        font-family: 'Modern Antiqua Bold', "Times New Roman", serif;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+    }
+
+    &__menu-box{
+      font-family: 'Palatino LT Black', "Times New Roman", serif;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 /* --- LAYOUTS - MAIN  */
@@ -46,9 +115,6 @@ body{
 
 .card-module{
   background-color: white;
-  &__photo-container {
-
-  }
 
   &__title{
     margin: 24px;
@@ -57,4 +123,9 @@ body{
   &__text{
     margin: 12px;
   }
+}
+
+.discovered {
+  filter: grayscale(0%);
+  transition: filter 1s ease;
 }

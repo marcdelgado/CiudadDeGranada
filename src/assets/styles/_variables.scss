@@ -13,8 +13,8 @@ $font-serif: "Georgia", "Times New Roman", serif;
 /* Size parameters */
 $media-width-transition: 1260px; /* from 1280x1024 screens, minus 20px for scroll */
 $desktop-fixed-width: 1200px;
-$desktop-quarter-width: 300px;
-$desktop-half-width: 600px;
+$desktop-col6-width: 200px;
+$desktop-col2-width: 600px;
 
 /* --- Palette colors ----------------------------------------------------- */
 
@@ -41,3 +41,8 @@ $footer-color-link: black;
 $footer-color-link-hover: black;
 $footer-bg-outer: gray;
 $footer-bg-inner: white;
+
+/* Bootstrap */
+$primary: white;
+$enable-shadows: false;
+$prefix: "mo-";

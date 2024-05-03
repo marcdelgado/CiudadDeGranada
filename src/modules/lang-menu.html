@@ -1,0 +1,16 @@
+
+<nav>
+    <i class="{{LANG.fontawesome}}"></i>
+    <span>{{LANG.label}}</span>
+    <ul>
+        <each loop="item, index in LANG.items">
+            <if condition="item.suffix !== LAYOUTS.HEAD.lang_html_code">
+                <li>
+                    <a href="home_{{item.suffix}}.html">
+                        {{item.label}}
+                    </a>
+                </li>
+            </if>
+        </each>
+    </ul>
+</nav>

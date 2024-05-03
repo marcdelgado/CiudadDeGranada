@@ -11,31 +11,19 @@
  */
 
 
-import locals_es from '../literals/literals_local_es.json';
-import locals_en from '../literals/literals_local_en.json';
-import locals_ca from '../literals/literals_local_ca.json';
-console.debug(locals_es.spanish.helloworld);
-console.debug(locals_en.english.helloworld);
-console.debug(locals_ca.catalan.helloworld);
-
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/swiper.scss';
-const swiper = new Swiper('.swiper', {
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 1000,
-    disableOnInteraction: false
-  },}
-  );
-
 /* https://godofredo.ninja/como-detectar-un-elemento-sticky-cuando-se-queda-fijo/ */
-const stickyElement = document.querySelector('.main-header');
-// Opciones para el IntersectionObserver
-const observer = new IntersectionObserver(
-  ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-  { threshold: [1] }
-);
-observer.observe(stickyElement);
+document.addEventListener('DOMContentLoaded', function () {
+  const main_header = document.querySelector('.header-layout');
+
+  const observer = new IntersectionObserver(
+    ([e]) => e.target.classList.toggle("sticked", e.intersectionRatio < 1),
+    { threshold: [1] }
+  );
+  observer.observe(main_header);
+
+});
+
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}

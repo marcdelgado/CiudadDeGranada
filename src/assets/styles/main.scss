@@ -7,32 +7,34 @@
 @import "variables";
 
 /* External fonts and styles */
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
-
 
 /* SMACSS Schema -  https://smacss.com/book/categorizing/ */
 
 /* BASE */
 @import "base";
 
+/* MODULES */
+@import "modules/photo";
+@import "modules/card";
+@import "modules/lang-menu";
+@import "modules/main-menu";
+
 /* LAYOUTS */
 @import "layouts/header";
 @import "layouts/main";
 @import "layouts/footer";
 
+/* PAGES */
+@import "pages/home";
+
 /* STATES */
 @import "states/common-states";
 
 /* THEMES */
+@import "themes/fonts";
 @import "themes/default_theme";
-
-/* MODULES */
-@import "modules/photo";
-@import "modules/card";
-
-/* PAGES */
-@import "pages/home";
-@import "pages/test";
 
 
 

@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <each loop="listitem, index in navitem">
+            <li>
+                <a href="{{listitem.link}}">
+                    <i class="{{listitem.fontawesome}}"></i>
+                    <span>{{{listitem.label_txt}}}</span>
+                </a>
+            </li>
+        </each>
+    </ul>
+</nav>

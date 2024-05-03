@@ -34,9 +34,9 @@
   .footer-layout {
     grid-area: footer-layout;
     grid-template:
-    ". left-box right-box ." 4fr
-    ". copyright-box copyright-box ." 1fr
-    / 1fr $desktop-half-width $desktop-half-width 1fr;
+    ". left-box right-box ." 160px
+    ". copyright-box copyright-box ." 40px
+    / 1fr $desktop-col2-width $desktop-col2-width 1fr;
   }
 }
 
