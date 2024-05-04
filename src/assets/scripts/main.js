@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function myFunction(x) {
-  x.classList.toggle("change");
+function switchHamburger() {
+  document.querySelector('.header-layout__main-header__hamburger-icon').classList.toggle("deployed");
+  document.querySelector('.header-layout__main-header__menu-box').classList.toggle("deployed");
 }

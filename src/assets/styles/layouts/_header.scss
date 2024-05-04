@@ -29,8 +29,7 @@
 
     &__world-icon{
       grid-area: world-icon;
-      align-self: center;
-      justify-self: center;
+      place-self: center center;
     }
 
     &__lang-box{
@@ -46,45 +45,65 @@
     "hamburger-icon title-box" 1fr
     / 40px 1fr;
 
-    &__hamburger-icon{
+    &__hamburger-icon {
       display: block;
       grid-area: hamburger-icon;
+      place-self: center center;
       cursor: pointer;
-      align-self: center;
-      justify-self: center;
+
+      .bar1, .bar2, .bar3 {
+        width: 40px;
+        height: 4px;
+        margin: 10px 0;
+        background-color: #fff;
+        transition: 0.4s;
+      }
+
+      /* https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+      &.deployed {
+        .bar1 {
+          transform: translate(0, 14px) rotate(-45deg);
+        }
+
+        .bar2 {
+          opacity: 0;
+        }
+
+        .bar3 {
+          transform: translate(0, -14px) rotate(45deg);
+        }
+      }
     }
 
     &__title-box{
       display: block;
       grid-area: title-box;
-      align-self: center;
-      justify-self: center;
+      place-self: center center;
     }
 
     &__menu-box{
       display: none;
       grid-area: menu-box;
+
+
+
+      &.deployed{
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-top: white solid 1px;
+      }
     }
+
   }
 }
 
-.bar1, .bar2, .bar3 {
-  width: 40px;
-  height: 4px;
-  margin: 10px 0;
-  background-color: #fff;
-  transition: 0.4s;
-}
 
-.change .bar1 {
-  transform: translate(0, 14px) rotate(-45deg);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  transform: translate(0, -14px) rotate(45deg);
-}
 
 
 /* --- DESKTOP ------------------------------------------------------------ */
@@ -121,6 +140,10 @@
         grid-area: lang-box;
         place-items: center end;
       }
+
+      &__world-icon{
+        display: none;
+      }
     }
 
     &__main-header{
@@ -135,6 +158,10 @@
         display: grid;
         grid-area: title-box;
         place-items: center start;
+      }
+
+      &__hamburger-icon{
+        display: none;
       }
 
       &__menu-box{
