@@ -2,7 +2,10 @@
    MAIN LAYOUT
    ======================================================================== */
 
-/* --- MOBILE / OLD DEVICES ----------------------------------------------- */
+/* --- MOBILE AND OLD DEVICES first --------------------------------------- */
+
+/* Mobile and common styles. Desktop overwrites below. */
+
 .main-layout{
   grid-area: main-layout;
   padding: 0 10px;
@@ -10,7 +13,12 @@
 }
 
 
-/* --- DESKTOP ------------------------------------------------------------ */
+
+
+/* --- DESKTOP only ------------------------------------------------------- */
+
+/* Overwrite mobile styles here. */
+
 @media screen and (orientation: landscape) and (width >= $media-width-transition) {
   .main-layout{
     background-color: blue;

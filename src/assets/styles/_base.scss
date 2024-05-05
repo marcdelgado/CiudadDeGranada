@@ -9,12 +9,12 @@
 
 html{
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: $base-font-size;
 }
 
 
 .fas, .fa-regular, .fa-solid, .fab, .fa-brands, .fa-globe{
-  padding-right: 4px;
+  padding-right: $base-icon-padding;
 }
 
 p, h1, h2, h3, h4, h5, h6, ul, ol, li, span {
@@ -33,37 +33,11 @@ ul, ol{
 
 /* --- MOBILE / OLD DEVICES ----------------------------------------------- */
 body {
-  display: grid;
-  grid-template:
-    "header-layout" 60px
-    "main-layout" 1fr
-    "footer-layout" 200px
-    / 1fr;
-  place-items: stretch stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   min-height: 100vh;
   padding: 0;
   margin: 0;
 }
-
-
-/* --- DESKTOP ------------------------------------------------------------ */
-@media screen and (orientation: landscape) and (width >= $media-width-transition) {
-  body {
-    grid-template:
-    "header-layout header-layout header-layout" 120px
-    ". main-layout ." 1fr
-    "footer-layout footer-layout footer-layout" 200px
-    / 1fr $desktop-fixed-width 1fr;
-    place-items: stretch stretch;
-    min-height: 100vh;
-  }
-}
-
-
-
-
-
-
-
-
-

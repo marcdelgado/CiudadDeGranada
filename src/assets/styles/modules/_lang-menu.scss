@@ -1,3 +1,11 @@
+/* ========================================================================
+   LANG MENU
+   ======================================================================== */
+
+/* --- MOBILE AND OLD DEVICES first --------------------------------------- */
+
+/* Mobile and common styles. Desktop overwrites below. */
+
 .header-layout{
   &__pre-header{
     &__lang-box{
@@ -24,5 +32,18 @@
         }
       }
     }
+  }
+}
+
+
+
+
+/* --- DESKTOP only ------------------------------------------------------- */
+
+/* Overwrite mobile styles here. */
+
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  .anything{
+    color: gray;
   }
 }

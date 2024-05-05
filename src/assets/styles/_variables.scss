@@ -3,6 +3,7 @@
    ======================================================================== */
 @use "sass:color";
 
+
 /* Global fonts */
 $font-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
   "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -10,31 +11,41 @@ $font-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
 $font-serif: "Georgia", "Times New Roman", serif;
 
 
-/* Size parameters */
-$media-width-transition: 1260px; /* from 1280x1024 screens, minus 20px for scroll */
+
+/* --- Body / base --------------------------------------------------------- */
+
+/* Global Sizes */
+$media-width-transition: 1260px; /* for @media, min. 1280x1024 screens */
 $desktop-fixed-width: 1200px;
-$desktop-col6-width: 200px;
-$desktop-col2-width: 600px;
+$transition-time: 300ms;
+$base-font-size: 16px;
+$base-icon-padding: 4px;
 
-/* --- Palette colors ----------------------------------------------------- */
 
-/* Body */
-$content-color-title: black;
-$content-color-text: black;
-$content-color-link: black;
-$content-color-link-hover: black;
-$content-bg-outer: gray;
-$content-bg-inner: white;
+/* --- Header layout ------------------------------------------------------- */
+$header-primary-color: white;
+$header-primary-font: "Modern Antiqua", "Times New Roman", serif;
+$header-secondary-color: #bbb;
+$header-secondary-font: "Palatino LT", "Times New Roman", serif;
+$header-link-color: #bbb;
+$header-hover-color: #ffa7a7;
+$header-hover-line-color: #d20000;
+$header-bg-color: black;
+$header-desktop-bar-thickness: 120px;
+$header-mobile-bar-thickness: 60px;
 
-/* Header */
-$header-color-title: black;
-$header-color-text: black;
-$header-color-link: black;
-$header-color-link-hover: black;
-$header-bg-outer: gray;
-$header-bg-inner: white;
+$header-desktop-strategy: sticky;
 
-/* Footer */
+/* --- Main/content layout ------------------------------------------------- */
+$main-color-title: black;
+$main-color-text: black;
+$main-color-link: black;
+$main-color-link-hover: black;
+$main-bg-outer: gray;
+$main-bg-inner: white;
+
+
+/* --- Footer layout ------------------------------------------------------- */
 $footer-color-title: black;
 $footer-color-text: black;
 $footer-color-link: black;
@@ -42,7 +53,8 @@ $footer-color-link-hover: black;
 $footer-bg-outer: gray;
 $footer-bg-inner: white;
 
-/* Bootstrap */
+
+/* --- Bootstrap ----------------------------------------------------------- */
 $primary: white;
 $enable-shadows: false;
 $prefix: "mo-";

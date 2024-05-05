@@ -15,26 +15,27 @@
 /* BASE */
 @import "base";
 
+/* PAGES */
+@import "pages/home";
+
+/* LAYOUTS */
+@import "layouts/header-layout";
+@import "layouts/main-layout";
+@import "layouts/footer-layout";
+
 /* MODULES */
 @import "modules/photo";
 @import "modules/card";
 @import "modules/lang-menu";
 @import "modules/main-menu";
 
-/* LAYOUTS */
-@import "layouts/header";
-@import "layouts/main";
-@import "layouts/footer";
-
-/* PAGES */
-@import "pages/home";
-
 /* STATES */
 @import "states/common-states";
 
 /* THEMES */
-@import "themes/fonts";
-@import "themes/default_theme";
+@import "themes/external-fonts";
+@import "themes/layout-theme";
+@import "themes/module-theme";
 
 
 

@@ -2,7 +2,10 @@
    CARD MODULE
    ======================================================================== */
 
-/* --- MOBILE / OLD DEVICES ----------------------------------------------- */
+/* --- MOBILE AND OLD DEVICES first --------------------------------------- */
+
+/* Mobile and common styles. Desktop overwrites below. */
+
 .card-module{
   padding: 10px;
 
@@ -16,3 +19,14 @@
 }
 
 
+
+
+/* --- DESKTOP only ------------------------------------------------------- */
+
+/* Overwrite mobile styles here. */
+
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  .anything{
+    color: gray;
+  }
+}
