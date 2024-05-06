@@ -1,7 +1,7 @@
 <figure class="photo-module">
     <picture class="photo-module__picture hover-zoom photo-transition">
         <each loop="size, index in params.viewports">
-            <source media="(max-width:{{size}}px)" srcset="{{params.paths.gallery}}/{{photo.file}}_{{size}}.webp">
+            <source media="(max-width:{{size}}px and max-height:{{size}}px)" srcset="{{params.paths.gallery}}/{{photo.file}}_{{size}}.webp">
         </each>
         <img class="photo-module__picture__img" src="{{params.paths.gallery}}/{{photo.file}}_{{params.max_resol}}.webp" alt="{{alt_txt}}">
     </picture>

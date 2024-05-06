@@ -26,7 +26,7 @@ function optimizeImages() {
 }
 
 function isImageFile(fileName) {
-  return /\.(jpe?g|png)$/i.test(fileName);
+  return /\.(jpe?g|png|webp|gif|bmp)$/i.test(fileName);
 }
 
 

@@ -8,16 +8,18 @@
 
 .main-layout{
   &__cards-group{
-    .card-module{
-      width: calc(100% / 3);
-      padding: 10px;
+    &__locations, &_events, &__gastronomy, &__history{
+      .card-module{
+        width: 100%;
+        padding: 10px;
 
-      &__title{
-        margin: 24px;
-      }
+        &__title{
+          margin: 24px;
+        }
 
-      &__text{
-        margin: 12px;
+        &__text{
+          margin: 12px;
+        }
       }
     }
   }
@@ -31,7 +33,43 @@
 /* Overwrite mobile styles here. */
 
 @media screen and (orientation: landscape) and (width >= $media-width-transition) {
-  .anything{
-    color: gray;
+  .main-layout{
+    &__locations, &__events, &__gastronomy, &__history{
+      &__cards-group{
+        display: flex;
+        align-items: stretch;
+
+        .card-module{
+          width: calc(calc($desktop-fixed-width - calc(24px * 2)) / 3);
+
+          &__title{
+            margin: 24px;
+          }
+
+          &__text{
+            margin: 12px;
+          }
+        }
+      }
+    }
+
+    &_eventz{
+      &__cards-group{
+        display: flex;
+        align-items: stretch;
+
+        .card-module{
+          width: calc(calc($desktop-fixed-width - calc(24px * 2)) / 3);
+
+          &__title{
+            margin: 24px;
+          }
+
+          &__text{
+            margin: 12px;
+          }
+        }
+      }
+    }
   }
 }

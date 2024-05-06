@@ -36,9 +36,12 @@
   &__text{
     margin: 12px;
   }
+
+  .discovered {
+    filter: grayscale(0%);
+    transition: filter 1s ease;
+  }
 }
 
-.discovered {
-  filter: grayscale(0%);
-  transition: filter 1s ease;
-}
+
+

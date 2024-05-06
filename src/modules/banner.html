@@ -1,0 +1,9 @@
+
+<each loop="photo, index in PAGES.HOME.banner.PHOTO">
+    <picture class="banner-module__picture">
+        <each loop="size, index in params.viewports">
+            <source media="(max-width:{{size}}px and max-height:{{size}}px)" srcset="{{params.paths.gallery}}/{{photo.file}}_{{size}}.webp">
+        </each>
+        <img class="banner-module__picture__img" src="{{params.paths.gallery}}/{{photo.file}}_{{params.max_resol}}.webp" alt="{{alt_txt}}">
+    </picture>
+</each>

@@ -7,18 +7,24 @@
 /* Mobile and common styles. Desktop overwrites below. */
 
 .main-layout{
-  grid-area: main-layout;
-  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 
-  &__cards-group{
+  &__locations, &_events, &__gastronomy, &__history{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+
+    &__cards-group{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
   }
 }
-
-
 
 
 /* --- DESKTOP only ------------------------------------------------------- */
@@ -27,14 +33,17 @@
 
 @media screen and (orientation: landscape) and (width >= $media-width-transition) {
   .main-layout{
-    width: $desktop-fixed-width;
-    padding: 0;
-    margin: auto 0;
-
-    &__cards-group{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
+    &__locations, &__events, &__gastronomy, &__history {
+      &__cards-group{
+        display: flex;
+        flex-flow: row wrap;
+        row-gap: 24px;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: $desktop-fixed-width;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 }
