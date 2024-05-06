@@ -1,9 +1,12 @@
 /* ========================================================================
    LAYOUT THEME
-   Here, change only fonts and colors !!
+   Here, only change fonts and colors !!
    ======================================================================== */
 
-/* --- Body / base --------------------------------------------------------- */
+
+/* === BODY / BASE ======================================================== */
+
+/* --- Body / Base - Mobile and old devices first first ------------------- */
 
 body{
   background-color: #f1f1f1;
@@ -12,19 +15,33 @@ body{
   opacity: 1;
 }
 
+/* --- Body / Base - desktop only ----------------------------------------- */
+
+@media screen and (orientation: landscape) and (width >= $media-width-transition) {
+  .remove-this-selector{
+    color: gray;
+  }
+}
 
 
 
-/* --- Header layout ------------------------------------------------------- */
+
+/* === HEADER LAYOUT ====================================================== */
+
+/* --- Header layout - Mobile and old devices first first ----------------- */
 
 .header-layout{
   font-family: $header-secondary-font;
   color: $header-secondary-color;
-  background-color: $header-bg-color;
+  background-color: rgb(0 0 0 / 100%);
 
   &__pre-header > *{
     font-size: 1.2rem;
     color: $header-secondary-color;
+  }
+
+  &__menu-hr{
+    background-color: $header-secondary-color;
   }
 
   &__main-header{
@@ -40,6 +57,7 @@ body{
     &__menu-box{
       font-family: $header-secondary-font;
       font-size: 1.3rem;
+      background-color: black;
 
       a {
         color: $header-link-color;
@@ -70,19 +88,95 @@ body{
   }
 }
 
+/* --- Header layout - desktop only --------------------------------------- */
+
+@media screen and (orientation: landscape) and (min-width: $media-width-transition) {
+  .header-layout{
+    background-color: rgb(0 0 0 / 0%);
+
+    &__main-header {
+      &__title-box {
+        &__title {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &::before, &::after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
+
+    &::before{
+      /* https://cssgradient.io/ */
+      background: rgb(0 0 0);
+      background: linear-gradient(180deg, $header-bg-color-rgba1, $header-bg-color-rgba2, $header-bg-color-rgba3);
+    }
+
+    &::after{
+      background: rgb(0 0 0);
+      opacity: 0;
+      transition: opacity $transition-time ease;
+    }
+
+    &__main-header__menu-box{
+      background-color: rgb(0 0 0 / 0%);
+    }
+  }
+
+
+}
 
 
 
-/* --- Main/content layout ------------------------------------------------- */
+
+/* === MAIN / CONTENT ===================================================== */
+
+/* --- Main / Content - Mobile and old devices first first ---------------- */
 
 .main-layout{
-  background-color: dimgray;
+  .remove-this-selector{
+    color: gray;
+  }
+}
+
+
+/* --- Main / Content - desktop only -------------------------------------- */
+
+@media screen and (orientation: landscape) and (min-width: $media-width-transition) {
+  .main-layout {
+    .remove-this-selector {
+      color: gray;
+    }
+  }
 }
 
 
 
 
-/* --- Footer layout ------------------------------------------------------- */
+/* === MAIN / CONTENT ===================================================== */
+
+/* --- Main / Content - Mobile and old devices first first ---------------- */
+
 .footer-layout{
-  background-color: lightslategray;
+  .remove-this-selector{
+    color: gray;
+  }
 }
+
+
+/* --- Main / Content - desktop only -------------------------------------- */
+
+@media screen and (orientation: landscape) and (min-width: $media-width-transition) {
+  .footer-layout {
+    .remove-this-selector {
+      color: gray;
+    }
+  }
+}
+

@@ -23,18 +23,21 @@ $base-icon-padding: 4px;
 
 
 /* --- Header layout ------------------------------------------------------- */
-$header-primary-color: white;
+$header-primary-color: #ff7e7e;
 $header-primary-font: "Modern Antiqua", "Times New Roman", serif;
-$header-secondary-color: #bbb;
+$header-secondary-color: #ccc;
 $header-secondary-font: "Palatino LT", "Times New Roman", serif;
-$header-link-color: #bbb;
-$header-hover-color: #ffa7a7;
+$header-link-color: #ccc;
+$header-hover-color: #ff7e7e;
 $header-hover-line-color: #d20000;
 $header-bg-color: black;
+$header-bg-color-rgba: rgb(0 0 0 / 70%);
+$header-bg-color-rgba1: rgb(0 0 0 / 100%) 0%;
+$header-bg-color-rgba2: rgb(0 0 0 / 80%) 90%;
+$header-bg-color-rgba3: rgb(0 0 0 / 0%) 100%;
 $header-desktop-bar-thickness: 120px;
 $header-mobile-bar-thickness: 60px;
-
-$header-desktop-strategy: sticky;
+$header-desktop-menu-sticky: true;
 
 /* --- Main/content layout ------------------------------------------------- */
 $main-color-title: black;

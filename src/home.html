@@ -14,9 +14,13 @@
         <p>
             {{{PAGES.HOME.locations.descrip_txt}}}
         </p>
-        <each loop="card, index in PAGES.HOME.locations.CARD">
-            <include src="modules/card.html"></include>
-        </each>
+
+        <div class="main-layout__cards-group">
+            <each loop="card, index in PAGES.HOME.locations.CARD">
+                <include src="modules/card.html"></include>
+            </each>
+        </div>
+
 
         <!-- ------------------------------------------------------------------- -->
     <!-- PAGE CONTENT ENDS HERE -->

@@ -9,7 +9,13 @@
 .main-layout{
   grid-area: main-layout;
   padding: 0 10px;
-  background-color: red;
+
+  &__cards-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 
@@ -21,7 +27,15 @@
 
 @media screen and (orientation: landscape) and (width >= $media-width-transition) {
   .main-layout{
-    background-color: blue;
+    width: $desktop-fixed-width;
+    padding: 0;
+    margin: auto 0;
+
+    &__cards-group{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
   }
 }
 

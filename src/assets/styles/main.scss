@@ -26,11 +26,12 @@
 /* MODULES */
 @import "modules/photo";
 @import "modules/card";
+@import "modules/banner";
 @import "modules/lang-menu";
 @import "modules/main-menu";
 
 /* STATES */
-@import "states/common-states";
+@import "states/layout-states";
 
 /* THEMES */
 @import "themes/external-fonts";

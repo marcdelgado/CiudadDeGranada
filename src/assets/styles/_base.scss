@@ -35,9 +35,11 @@ ul, ol{
 body {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
+  justify-content: stretch;
   min-height: 100vh;
   padding: 0;
   margin: 0;
 }
+
+

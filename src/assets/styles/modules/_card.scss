@@ -6,15 +6,20 @@
 
 /* Mobile and common styles. Desktop overwrites below. */
 
-.card-module{
-  padding: 10px;
+.main-layout{
+  &__cards-group{
+    .card-module{
+      width: calc(100% / 3);
+      padding: 10px;
 
-  &__title{
-    margin: 24px;
-  }
+      &__title{
+        margin: 24px;
+      }
 
-  &__text{
-    margin: 12px;
+      &__text{
+        margin: 12px;
+      }
+    }
   }
 }
 

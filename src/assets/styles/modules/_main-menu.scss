@@ -3,6 +3,7 @@
    ======================================================================== */
 
 /* --- MOBILE AND OLD DEVICES first --------------------------------------- */
+
 /* Mobile and common styles. Desktop overwrites below. */
 
 .header-layout{
@@ -36,6 +37,7 @@
 
 
 /* --- DESKTOP only ------------------------------------------------------- */
+
 /* Overwrite mobile styles here. */
 
 @media screen and (orientation: landscape) and (min-width: $media-width-transition) {
@@ -49,12 +51,12 @@
           float: right;
 
           ul {
+            display: flex;
             flex-flow: row wrap;
             justify-content: center;
             height: 100%;
-            list-style-type: none;
             margin: 0;
-            display: flex;
+            list-style-type: none;
           }
 
           li {
