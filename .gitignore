@@ -252,10 +252,5 @@ $RECYCLE.BIN/
 ### Custom ###
 dist
 .idea
-.parce
-src/*_*.html
-src/assets/images/gallery/*.webp
-src/assets/images/gallery/*.png
-src/assets/images/gallery/*.jpeg
-src/assets/images/gallery/*.jpg
+.parcel-cache
 /package-lock.json
