@@ -23,7 +23,7 @@ fs.readdir(templatesDir, (err, files) => {
         const newFileName = `${path.basename(file, '.html')}_${lang.toLowerCase()}.html`;
         const newFilePath = path.join(outputDir, newFileName);
 
-        const content = `<scope with="${lang}">\n    <include src="${templatesDir}/${file}"></include>\n</scope>`;
+        const content = `<scope with="${lang}">\n    <include src="${file}"></include>\n</scope>`;
         //const content = `<include src="pages/${file}" locals="${lang}"></include>\n`;
 
         // Escribe el nuevo archivo con el contenido adecuado
